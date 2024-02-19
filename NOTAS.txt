@@ -1,0 +1,7 @@
+Los que deseen acceder a la app creada en clase desde su celular pueden hacer los siguiente.
+
+Buscar cual es la IP de su PC, eso lo hacen facilmente abriendo el CMD y poniendo ipconfig, ahi buscan los numeros que estan al lado de Dirección IPv4.
+Copian esos numeros en el buscador de su cell, ejemplo Google Chrome y le agregan : 5000 ( osea el puerto que hemos colocado en la app, tambien puede ser 8000 , en caso de que no lo hallan cambiado), por ejemplo en mi caso sería algo así:
+191.167.1.316:5000
+
+y ya, magia :3
