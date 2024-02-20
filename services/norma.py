@@ -28,4 +28,9 @@ class NormaService():
         self.db.commit()
         return
 
+    def delete_norma(self, id: int):
+        self.db.query(Normamodel).filter(Normamodel.id == id).delete()
+        self.db.commit()
+        return 
+
         

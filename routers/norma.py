@@ -81,8 +81,8 @@ def update_norma(id: int, norma: Norma):
 @norma_router.delete('/normas/{id}', tags=['NORMA'], response_model=dict, status_code=200)
 def delete_normas(id: int)-> dict:
     db = Session()
-    result=db.query(Normamodel).filter(Normamodel.id == id).first()
+    result: Normamodel =db.query(Normamodel).filter(Normamodel.id == id).first()
     if not result:
         return JSONResponse(content={"mensaje": "no se encontro el resultado"}, status_code=404)
-    db.delete(result)
+    NormaService(db).delete_norma(id)
     return JSONResponse(content={"mensaje": "El elemento se ha eliminado"}, status_code=200)
